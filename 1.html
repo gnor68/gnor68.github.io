@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.lap</title>
+    <link rel="stylesheet" href="style/css/1.css">
+
+</head>
+
+<body onload="inputokba()">
+    <div class="a">
+        <div class="top">
+            <div class="displayText">
+                <h1>Rögzített fejléc</h1>
+            </div>
+            <div class="dateTime">
+                <form name="ora">
+                    <textarea name="datum" id="di"></textarea>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="b">
+        <div class="left">
+            <h1>Left div</h1>
+            <p>
+                urhgfurughr ufes fusef uzeufufs
+                shfusfusf uzhfshfudszhf fsofuosfs
+                urhgfurughr ufes fusef uzeufufs
+
+            </p>
+        </div>
+        <div class="middle">
+            <h1>Middle div</h1>
+            <div class="p">
+                <p>
+                    hfusrhf frdgiordirgirig grdgirgir
+                    urhgfurughr ufes fusef uzeufufs
+
+                </p>
+            </div>
+            <div class="forminmiddle">
+                <form class="login">
+                    <div class="f" id="E-mail">
+                        <label for="E-mail">E-mail címe:</label><br>
+                        <input type="email" name="E-mail">
+                    </div><br>
+                    <div class="f" id="név">
+                        <label for="név">Neve:</label><br>
+                        <input type="text" name="név">
+                    </div><br>
+                    <div class="f" id="pwd">
+                        <label for="pwd">Azonosítója:</label><br>
+                        <input type="password" name="pwd">
+                    </div><br>
+                    <div class="f" id="btn">
+                        <label for="min">Jogosultsági szint:</label><br>
+
+                        <input type="text" list="jog" name="min"><br>
+                        <datalist id="jog">
+                            <option>Admin</option>
+                            <option>Értékesítés</option>
+                            <option>Könyvelés</option>
+                            <option>Iroda</option>
+                            <option>Termelés</option>
+                            <option>Vendég</option>
+                        </datalist><br>
+
+                        <button type="button" onclick="belépés()">Belépés</button>
+                    </div>
+                </form>
+            </div>
+            <div class="gyakorlás">
+                <button type="button" onclick="massModify('input','placeholder','solid red 1px vmiért nem jó')" >placeholder</button>
+               
+            </div>
+            <div class="p">
+                <p>
+                    shfusfusf uzhfshfudszhf fsofuosfs
+                    psf sossghifhgo
+                    udsu hfusrhf frdgiordirgirig grdgirgir
+                </p>
+            </div>
+        </div>
+
+        <div class="right">
+            <h1>Right div</h1>
+            <input type="text" list="cars">
+            <datalist id="cars">
+                <option>Volvo</option>
+                <option>Saab</option>
+                <option>Mercedes</option>
+                <option>Audi</option>
+            </datalist>
+            </input>
+            <div class="img">
+                <a href="http://www.google.com" target="blank"><img id="img1" src="Img/csazasztalon.gif"
+                        alt="csizma az asztalon"></a>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="c">
+        <div class="pagenav">
+            <nav class="pn">
+                <a href="1.html">1</a>
+                <a href="2.html">2</a>
+                <a href="3.html">3</a>
+                <a href="4.html">4</a>
+                <a href="5.html">5</a>
+                <a href="index.html">Kilépés</a>
+            </nav>
+        </div>
+    </div>
+    <div>
+        <footer class="cop" style="font-size: small;">Copyright of "All digital media Co."</footer>
+    </div>
+    <script src="style/java/main.js"></script>
+
+</body>
+
+</html>

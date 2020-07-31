@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. lap</title>
+    <link rel="stylesheet" href="style/css/5.css">
+</head>
+
+<body>
+    <div class="bal">
+        <button type="button" class="create" onclick="fillDynamicData(tomb)">CreateTable</button>
+<input type="text" placeholder="Ez mire lett készítve?">
+
+    </div>
+    <div class="kozep" id="middle">
+        <table id="t1">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="jobb">
+       <input id="szöveg" type="text" placeholder="Palindrom test" style="width: 200px">
+        <input id="szám" type="number" placeholder="Numbers only" style="width: 200px">
+        <button id="gomb" type="button" style="width: 200px; height: 50px;" onclick="a()">Próba</button>
+    </div>
+
+    <script>
+     
+        let tomb = [
+            { name: "joe", adress: "bp", tel: 1234, email: "abcd@gmail.com", szerkeszt: "", töröl: "" },
+            { name: "fred", adress: "nyc", tel: 123456, email: "abcd@gmail.com", szerkeszt: "", töröl: "" },
+            { name: "odett", adress: "massechuses", tel: 1234, email: "abcd@gmail.com", szerkeszt: "", töröl: "" },
+            { name: "mary", adress: "fla", tel: 56345, email: "abcd@gmail.com", szerkeszt: "", töröl: "" },
+            { name: "bello", adress: "oregon", tel: 1234, email: "abcd@gmail.com", szerkeszt: "", töröl: "" },
+            { name: "chiko", adress: "langley", tel: 47528, email: "abcd@gmail.com", szerkeszt: "", töröl: "" },
+            { name: "george", adress: "bp", tel: 984531, email: "abcd@gmail.com", szerkeszt: "", töröl: "" },
+            { name: "holly", adress: "bp", tel: 1234, email: "abcd@gmail.com", szerkeszt: "", töröl: "" },
+            { name: "freddy", adress: "nyc", tel: 123456, email: "abcd@gmail.com", szerkeszt: "", töröl: "" },
+            { name: "oleg", adress: "massechuses", tel: 1234, email: "abcd@gmail.com", szerkeszt: "", töröl: "" },
+            { name: "mudretty", adress: "fla", tel: 56345, email: "abcd@gmail.com", szerkeszt: "", töröl: "" },
+            { name: "borelo", adress: "oregon", tel: 1234, email: "abcd@gmail.com", szerkeszt: "", töröl: "" },
+            { name: "chocolate", adress: "langley", tel: 47528, email: "abcd@gmail.com", szerkeszt: "", töröl: "" },
+            { name: "getsby", adress: "bp", tel: 984531, email: "abcd@gmail.com", szerkeszt: "", töröl: "" },
+        ];
+
+        function createColumnHeaderAndContent(arr) {
+            let x = Object.values(arr)[0];              //kell az objektum key/name-value-ből a key/name
+            let keyListOfArr = Object.keys(x);          //vissza ad egy tombben csak a key/name value nélkül
+
+            for (let i = 0; i < keyListOfArr.length; i++) {
+
+                let th = document.createElement("th");
+                th.innerHTML = keyListOfArr[i];
+                let thead = document.querySelector("#t1 thead");
+                thead.appendChild(th);
+            }
+        }
+
+        function createRowsWithContent(arr) {
+            let valuesOfArr = Object.values(arr);
+
+            for (let i = 0; i < valuesOfArr.length; i++) {
+
+                let a1 = valuesOfArr[i];
+                let a2 = Object.values(a1);
+                let tr = document.createElement("tr");
+
+                for (let t = 0; t < a2.length; t++) {
+                    let td = document.createElement("td");
+                    td.innerHTML = a2[t];
+                    tr.appendChild(td);
+                }
+                let tbody = document.querySelector("#t1 tbody");
+                tbody.appendChild(tr);
+            }
+        }
+
+        function fillDynamicData(arr) {                     //tombot vár
+            createColumnHeaderAndContent(arr);
+            createRowsWithContent(arr);
+        }
+
+        let createButtonBal = document.querySelector(".create");
+        createButtonBal.addEventListener("click", function () {
+            createButtonBal.parentElement.style.backgroundColor = "red";
+        })
+
+
+    </script>
+</body>
+
+</html>

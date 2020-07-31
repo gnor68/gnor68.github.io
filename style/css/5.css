@@ -1,0 +1,43 @@
+.bal{
+    float: left;
+     width: 10%;
+    height: 300px;
+    background-color: burlywood ;
+    border: solid 1px black;
+}
+.kozep{
+    float: left;
+     width:69.5%;
+    height: 300px;
+    background-color: burlywood ;
+    border: solid 1px black;
+}
+.jobb{
+    float: left;
+     width: 20%;
+    height: 300px;
+    background-color: burlywood;
+    border: solid 1px black;
+}
+.bal button{
+    width: 90%;
+    height: 40px;
+}
+#middle table {
+    border: solid 1px black;
+width: 98%;
+height:auto;
+margin: auto;
+
+}
+#t1 th{
+    border: solid 1px black; 
+    width: auto;
+    height: 30px;
+
+}
+#t1 td{
+    border: solid 1px black; 
+    width: auto;
+    height: auto;
+}

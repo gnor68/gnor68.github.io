@@ -1,0 +1,127 @@
+@font-face{
+  font-family:"roboto";
+  src: url("style/fonts/Roboto-BlackItalic.ttf");
+font-weight: 500;
+}
+body{
+  font-family: "roboto";
+box-sizing: border-box;
+}  
+.bal{
+border: solid 1px darkblue;
+background-color: lightblue;
+width:20%;
+float: left;
+height: 250px;
+margin: 0px 7px 0px 0px;
+}
+.table{
+    border: solid 1px darkblue;
+    background-color: lightblue;
+width: 58%;
+float: left;
+height: 400px;
+margin: 0px  7px 0px 0px;
+overflow:auto;
+}
+.jobb{
+    border: solid 1px darkblue;
+    background-color: lightblue;
+width: 20%;
+float: left;
+height: 250px;
+margin: 0px opx 0px 0px;
+}
+#olid{
+    width: 80%; 
+    margin: auto;
+}
+#olid span{
+font-style: italic;
+text-decoration:underline;
+font-weight: bold;
+}
+#olid input{
+  width: auto;
+  margin: auto;
+  float: right;
+ 
+}
+
+.cop{
+    height: 15px;
+    border: solid 1px black;
+    width: 100%;
+    margin-top: 7px;
+    float: left;
+    text-align: right;
+ 
+}
+
+.pagenav{
+    float: left;
+    width: 100%;
+
+}
+.pagenav a{
+    border: solid 1px black;
+    width:14.97%;
+    background-color: khaki;
+    padding:7px;
+    margin-top: 7px;
+    margin-left: 2px;
+    display:inline-table;
+    text-align: center;
+}
+
+
+@media screen and (max-width:800px) {
+    .bal, .table, .jobb, .pagenav{
+      width:100%; /* viewport is 800px or smaller */
+margin-top: 7px;
+    }
+  }
+  @media screen and (min-width:801px) {
+    .bal, .table, .jobb, .pagenav{
+      margin-top: 0px;
+    }
+    .bal{
+      width: 20%;
+    }
+    .table{
+      width: 58%;
+    }
+    .jobb{
+      width: 20%;
+    }
+  }
+@media screen and (max-width:800px) {
+    .pagenav a{
+        width: 100%;
+      display: block;
+  }
+}
+
+  @media screen and (min-width:801px) {
+    .pagenav a{
+        width: 14.9%;
+      display: inline-table;
+  }
+}
+.proba{
+  border: solid 1px black;
+  display: grid;
+  margin: auto;
+}
+.proba button{
+  width: 200px;
+  height: 40px;
+  margin: 5px;
+}
+.listaJobb {
+  border: solid 1px black;
+  margin: auto;
+  height: 90%;
+  width: 90%;
+   overflow: auto;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.Lap</title>
+    <link rel="stylesheet" href="style/css/2.css">
+</head>
+
+<body onload="listJobbFill(listaJobbElemek)">
+
+    <div class="bal">
+        <div class="proba">
+            <button type="button" id=s onclick="summa(listaJobbElemek)">Összeg</button>
+            <button type="button" id=d onclick="darab(listaJobbElemek)">Páros ? db</button>
+            <button type="button" id=l onclick="legnagyobb(listaJobbElemek)">Legnagyobb</button>
+            <button type="button" id=i onclick="nagyobbMint(listaJobbElemek,9)">nagyobb mint ...szám</button>
+        </div>
+    </div>
+
+    <div class="table">
+        <div class="t1">
+            <h3 style="text-align: center;">Étlap</h3>
+            <ol id="olid">
+                <li><span>Hideg előételek:</span>
+                    <ul>
+                        <li>Libamáj zsírjában <input type="checkbox" name="he1" id="he1"></li>
+                        <li>Mexicói chili wrapper<input type="checkbox" name="he2" id="he2"></li>
+                        <li>Cocktail shrimp<input type="checkbox" name="he3" id="he3"></li>
+                    </ul>
+                </li>
+                <li><span>Levesek:</span>
+                    <ul>
+                        <li>Gazpacho<input type="checkbox" name="le1" id="le1"></li>
+                        <li>"Tészta" leves<input type="checkbox" name="le2" id="le2"></li>
+                        <li>Borjúragu leves<input type="checkbox" name="le2" id="le2"></li>
+                    </ul>
+                </li>
+                <li><span>Meleg előételek:</span>
+                    <ul>
+                        <li>Eggs Benedict<input type="radio" name="me" id="1"></li>
+                        <li>Majorannás kacsamáj<input type="radio" name="me" id="2"></li>
+                        <li>Corn on the cobb<input type="radio" name="me" id="3"></li>
+                    </ul>
+                </li>
+                <li><span>Főételek:</span>
+                    <ul>Szárnyasok:
+                        <li>Oregoni pikáns kacsamell<input type="radio" name="me" id="1"></li>
+                        <li>Liba konfittált combja<input type="radio" name="me" id="2"></li>
+                        <li>Csirkemell csíkok<input type="radio" name="me" id="3"></li>
+                    </ul>
+                    <ul>Halak:
+                        <dl>
+                            <li>
+                                <dt>Pisztráng</dt>
+                            </li>
+                            <dd>- Szilvásváradi blah-blah </dd>
+                            <li>
+                                <dt>Ponty</dt>
+                            </li>
+                            <dd>- A balatoni porszívó</dd>
+                            <li>
+                                <dd>- Iszapízű</dd>
+                            </li>
+                            <dt></dt>
+                        </dl>
+                    </ul>
+                    <ul>Borjú:
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul>Marha:
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul>Vadak:
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                <li><span>Desszertek:</span>
+                    <ul>Meleg desszertek:
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul>Hűtött desszertek:
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+                </li>
+
+            </ol>
+        </div>
+    </div>
+
+    <div class="jobb">
+
+        <div class="listaJobb">
+            <!--  onload -on dinamikusan betölt-->
+            <ul id="myList">
+            </ul>
+        </div>
+    </div>
+
+    <div class="c">
+        <div class="pagenav">
+            <nav class="pn">
+                <a href="1.html">1</a>
+                <a href="2.html">2</a>
+                <a href="3.html">3</a>
+                <a href="4.html">4</a>
+                <a href="5.html">5</a>
+                <a href="index.html">Kilépés</a>
+            </nav>
+        </div>
+    </div>
+    <div>
+        <footer class="cop" style="font-size: small;">Copyright of "All digital media Co."</footer>
+    </div>
+    <script>
+
+        let listaJobbElemek = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+        function createLi(tartalom, listName) {
+            var parent = document.createElement("LI");
+            var child = document.createTextNode(tartalom);
+            parent.appendChild(child);
+            document.getElementById(listName).appendChild(parent);
+        }
+
+        function listJobbFill(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                tartalom = arr[i];
+                listName = "myList"
+                createLi(tartalom, listName);
+            }
+        }
+
+        function summa(arr) {
+            s = 0;
+            for (let i = 0; i < arr.length; i++) {
+                s = s + arr[i];
+            }
+            alert(s)
+        }
+
+        function darab(arr) {
+            let db = 0;
+            for (let i = 0; i < arr.length; i++) {
+                x = arr[i];
+                (x % 2) ? db = db + 1 : db = db;
+            }
+            alert(db);
+        }
+
+        function legnagyobb(arr) {
+            let big = arr[0];
+            for (let i = 0; i < arr.length; i++) {
+                big > arr[i] ? big = big : big = arr[i];
+            }
+            alert(big);
+        }
+
+        function nagyobbMint(arr, num) {
+
+            let txt = ["A lista:" + "\n"];
+            let z = num;
+            for (let i = 0; i < arr.length; i++) {
+                (arr[i] > z) ? txt.push("Ez nagyobb mint " + z + ": " + arr[i] + "\n") : txt.push("Ez nem nagyobb " + z + "-nál: " + arr[i] + "\n");
+            }
+            alert(txt.toString("\n"));
+        }
+
+    </script>
+</body>
+
+</html>

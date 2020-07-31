@@ -1,0 +1,111 @@
+@font-face{
+    font-family:"roboto";
+    src: url("style/fonts/Roboto-BlackItalic.ttf");
+font-weight: 500;
+}
+body{
+    font-family: "roboto";
+  box-sizing: border-box;
+}
+.bal{
+    width: 10%;
+    height: 500px;
+    margin: 0px 7px 0px 0px;
+    border: solid 1px black;
+float: left;
+background-color: lavender;
+}
+.kozep{
+    width: 78%;
+    height: 500px;
+    margin: 0px 7px 0px 0px;
+    border: solid 1px black;
+float: left;
+background-color: lavender;
+}
+.jobb{
+    width: 10%;
+    height: 500px;
+    margin: 0px 0px 0px 0px;
+    border: solid 1px black;
+float: left;
+background-color: lavender;
+}
+.t1{
+    height: 450px;
+    width: 95%;
+border: solid 1px black;
+margin: auto;
+overflow: auto;
+
+
+}
+.t1 th{
+    text-align: center;
+    background-color: royalblue;
+border: solid 0.5px black;
+}
+.t1 td{
+    text-align: left;
+     border-bottom: solid 0.5px lightblue;
+text-align: left;
+}
+tr:nth-child(even){
+    background-color: whitesmoke;
+}
+
+.t1 caption{
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: large;
+}
+.cop{
+    height: 15px;
+    border: solid 1px black;
+    width: 100%;
+    margin-top: 7px;
+    float: left;
+    text-align: right;
+    background-color: lavender;
+}
+
+.pagenav{
+    float: left;
+    width: 100%;
+    background-color: lavender;
+}
+.pagenav a{
+    border: solid 1px black;
+    width:14.97%;
+    background-color: khaki;
+    padding:7px;
+    margin-top: 7px;
+    margin-left: 2px;
+    display:inline-table;
+    text-align: center;
+}
+
+/* Use a media query to add a break point at 600px: */
+@media screen and (max-width:800px) {
+    .bal, .jobb,.pagenav{
+      width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    .kozep{
+        width: max-content;
+    }
+  }
+  /* Use a media query to add a break point at 600px: */
+@media screen and (max-width:600px) {
+    .pagenav a{
+        width: 100%;
+      display: block;
+  }
+}
+  /* Use a media query to add a break point at 600px: */
+  @media screen and (min-width:601px) {
+    .pagenav a{
+        width: 14.9%;
+      display: inline-table;
+  }
+}

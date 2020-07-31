@@ -1,0 +1,225 @@
+@font-face{
+    font-family:"roboto";
+    src: url("style/fonts/Roboto-BlackItalic.ttf");
+font-weight: 500;
+}
+body{
+    font-family: "roboto";
+  box-sizing: border-box;
+}
+.top{
+    position: fixed;
+    background-color: khaki;
+    border: solid 1px black;
+    width: 98%;
+    height: 100px;
+    margin-top: 0px;
+    margin-left:7px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    text-align: center;
+
+}
+.top .displayText{
+    width: 79.5%;
+    float: left;
+    text-align: center;
+    height: 100%;
+    border: solid 1px black;
+    margin: auto;
+
+}
+
+.top .dateTime{
+border:solid 1px black;
+width: 20%;
+height: 100%;
+margin: auto;
+float: right;
+
+}
+
+.top .dateTime textarea{
+    width: fit-content;
+    height: 65px;
+    float: right;
+    margin: auto;
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 5px;
+    border: none;
+    background:transparent;
+    font-weight: bolder;
+    overflow: hidden;
+}
+.left{
+    background-color: khaki;
+    border: solid 1px black;  
+    width: 10%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 110px;
+    float: left;
+    text-align: center;
+    height:350px;
+}
+.left p{
+    float: left;
+    width: 90%;
+    height: 250px;
+    margin:5px;
+overflow: auto;
+}
+.middle{
+    background-color: khaki;
+    border: solid 1px black; 
+    width:75%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 110px;
+    float: left;
+    text-align: center;
+    padding: 20px;
+height: 1300px;
+}
+.middle p{
+    border: solid 1px black;
+    float: left;
+    margin: 5px;
+    width: 48%;
+    height: 250px;
+overflow: auto;
+}
+.middle .forminmiddle{
+    float: left;
+    border: solid 1px black;
+    width: 48%;
+    height: 250px;
+    margin: 5px;
+}
+.middle .forminmiddle .login .f label{
+  text-align: center;
+  font-weight: bold;
+  width: 200px;
+  height: 20px;
+}
+.middle .forminmiddle .login #btn button{
+font-weight: bold;
+width: 200px;
+height: 40px;
+}
+.middle .forminmiddle .login .f input{
+    width: 200px;
+height: 20px;
+}
+.right:hover{
+    background-color: tomato;
+}
+.right{
+    background-color: khaki;
+    border: solid 1px black; 
+    width: 10%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 110px;
+    float: left;
+    text-align: center;
+height: 350px;
+}
+.right input{
+    width: 90%;
+    margin-bottom: 7px;
+}
+.img{
+    width: 90%;
+    margin: auto;
+    border:solid 1px black;
+}
+#img1{
+    width: 75px;
+height: 75px;
+margin: auto;
+}
+.cop{
+    height: 15px;
+    border: solid 1px black;
+    width: 100%;
+    margin-top: 7px;
+    float: left;
+    text-align: right;
+ 
+}
+
+.pagenav{
+    float: left;
+    width: 100%;
+
+}
+.pagenav a{
+    border: solid 1px black;
+    width:14.97%;
+    background-color: khaki;
+    padding:7px;
+    margin-top: 7px;
+    margin-left: 2px;
+    display:inline-table;
+    text-align: center;
+}
+.img img{
+   height: 100px;
+   margin-top: 20px;
+}
+/* Use a media query to add a break point at 600px: */
+@media screen and (max-width:800px) {
+    .left, .middle, .right, .top{
+      width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    .middle{
+        height: max-content;
+    }
+    .left{
+        height: max-content;
+    }
+    .pagenav{
+        width: 100%;
+    }
+.middle .forminmiddle{
+        width: 90%;
+        height: max-content;
+    }
+   .middle p{
+width: 90%;
+overflow: unset;
+height: max-content;
+    }
+    .left p{
+        width: 90%;
+        overflow: unset;
+        height: max-content;
+    }
+    .pagenav a{
+        width: 95%;
+      display: block;
+  }
+}
+  /* Use a media query to add a break point at 600px: */
+  @media screen and (min-width:801px) {
+    .pagenav a{
+        width: 14.9%;
+      display: inline-table;
+  }
+.middle .forminmiddle{
+      width: 48%;
+      height: 250px;
+  }
+  .middle p{
+      width:48%;
+      overflow: auto;
+      height: 250px;
+  }
+  .left p{
+      width: 90%;
+      overflow: auto;
+      height: 250px;
+  }
+}
